@@ -1,18 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import DB from '@database'
-<<<<<<< HEAD
-
-const allAvos = async (request: NextApiRequest, response: NextApiResponse) => {
-  const db = new DB()
-
-  const id = request.query.id
-
-  const avo = await db.getById(id as string)
-  response.status(200).json(avo)
-}
-
-export default allAvos
-=======
 import enablePublicAccess from '@cors'
 
 const AvoDetail = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -36,4 +23,3 @@ const AvoDetail = async (req: NextApiRequest, res: NextApiResponse) => {
 }
 
 export default AvoDetail
->>>>>>> end
